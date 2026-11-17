@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Grade Calculator</h1>
+            <p>Academic Performance Management System</p>
+        </header>
+
+        <section class="student-info">
+            <h2>Student Information</h2>
+
+            <div class="input-group">
+                <div>
+                    <label>Student Name</label>
+                    <input type="text" id="studentName"
+                        placeholder="Enter student name" required>
+                </div>
+
+                <div>
+                    <label>Roll Number</label>
+                    <input type="text" id="rollNumber"
+                        placeholder="Enter roll number" required>
+                </div>
+
+                <div>
+                    <label>Department</label>
+                    <input type="text" id="department"
+                        placeholder="Enter department">
+                </div>
+
+                <div>
+                    <label>Semester</label>
+                    <select id="semester">
+                        <option value="">Select Semester</option>
+                        <option>Semester 1</option>
+                        <option>Semester 2</option>
+                        <option>Semester 3</option>
+                        <option>Semester 4</option>
+                        <option>Semester 5</option>
+                        <option>Semester 6</option>
+                        <option>Semester 7</option>
+                        <option>Semester 8</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="marks-section">
+            <h2>Subject Marks</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Subject Name</th>
+                        <th>Marks (100)</th>
+                    </tr>
+                </thead>
+
+                <tbody id="subjectTable">
+                    <!-- Generated using JavaScript -->
+                </tbody>
+            </table>
+
+            <p class="note">
+                * Minimum passing marks: 50 in each subject.
+            </p>
+        </section>
+
+        <div class="buttons">
+            <button onclick="calculateResult()" class="calculate">
+                Calculate Result
+            </button>
+
+            <button onclick="resetForm()" class="reset">
+                Reset
+            </button>
+        </div>
+
+        <section id="result" class="result-section">
+
+            <h2>Academic Result</h2>
+
+            <div class="student-result">
+                <p>Student: <strong id="displayName"></strong></p>
+                <p>Roll Number: <strong id="displayRoll"></strong></p>
+                <p>Department: <strong id="displayDept"></strong></p>
+                <p>Semester: <strong id="displaySemester"></strong></p>
+            </div>
+
+            <div class="dashboard">
+
+                <div class="card">
+                    <h3>Total Marks</h3>
+                    <p id="total">0 / 600</p>
+                </div>
+
+                <div class="card">
+                    <h3>Percentage</h3>
+                    <p id="percentage">0%</p>
+                </div>
+
+                <div class="card">
+                    <h3>Overall Grade</h3>
+                    <p id="grade">-</p>
+                </div>
+
+                <div class="card">
+                    <h3>Final Result</h3>
+                    <p id="status">-</p>
+                </div>
+
+            </div>
+
+            <h3 class="table-heading">Subject Performance</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultTable"></tbody>
+            </table>
+
+            <div class="remarks">
+                <h3>Performance Remarks</h3>
+                <p id="remarks"></p>
+            </div>
+
+            <button onclick="window.print()" class="print">
+                Print Result
+            </button>
+
+        </section>
+
+        <footer>
+            <p>Student Grade Calculator | Academic Portal</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
